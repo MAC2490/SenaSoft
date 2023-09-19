@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\DatoCliente;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+	$datos['listado'] = DatoCliente::all();
+    return view('index', $datos);
 });
 
 Route::resource('url', \App\Http\Controllers\DatoClienteController::class);
