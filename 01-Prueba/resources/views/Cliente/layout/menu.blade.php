@@ -22,6 +22,9 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="{{ route('url.index') }}">Consultar</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="http://127.0.0.1:8000/">Volvel al inicio</a>
+                    </li>
                 </ul>
             </div>
         </div>

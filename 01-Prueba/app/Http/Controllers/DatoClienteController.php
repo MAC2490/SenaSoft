@@ -76,16 +76,22 @@ class DatoClienteController extends Controller
      * @param  \App\Models\DatoCliente  $datoCliente
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, DatoCliente $datoCliente)
+    public function update(Request $request)
     {
-        $datoCliente->update($request->all());
+        $datoCliente = DatoCliente::find($request->input('datos_id'));   
+        
         // $datoCliente->nombre = $request->input('nombre');
         // $datoCliente->apellido = $request->input('apellido');
         // $datoCliente->documento = $request->input('documento');
         // $datoCliente->estado = $request->input('estado');
         // $datoCliente->save();
 
-        return to_route('url.index');
+        // return $datoCliente;
+        // return to_route('url.index');
+
+        print_r( $datoCliente->toArray() );
+        var_dump( $request->input() );
+
     }
 
     /**

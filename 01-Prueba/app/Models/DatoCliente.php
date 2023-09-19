@@ -12,6 +12,7 @@ class DatoCliente extends Model
     protected $fillable = [
         'nombre',
         'apellido',
-        'documento'
+        'documento',
+        'estado'
     ];
 }

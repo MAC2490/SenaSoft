@@ -50,7 +50,7 @@
                             <form action="{{ route('url.update', ['url' => $datos->id]) }}" method="POST">
                                 @csrf
                                 @method('PATCH')
-                                <input type="hidden" name="datos_id" value="{{ $datos->id }}">
+                                <input type="hidden" name="datos_id" value="">
                                 <div class="mb-3">
                                     <label class="form-label">Nombre</label>
                                     <input name="nombre" type="text" class="form-control">
